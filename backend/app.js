@@ -1,5 +1,3 @@
-//run in cmd with docker run -p 3000:3000 taobin-test
-
 //modules
 var createError = require('http-errors');
 var express = require('express');
@@ -9,8 +7,8 @@ var logger = require('morgan');
 var mysql = require('mysql2');
 
 //routes
-var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var drinksRouter = require('/routes/drinks')
 
 //express app
 var app =  express();
@@ -21,7 +19,7 @@ const connectionConfig = {
   user: process.env.MYSQL_USER || 'root',
   password: process.env.MYSQL_PASSWORD || 'my-secret-pw',
   database: process.env.MYSQL_DATABASE || 'my_database'
-};
+}; 
 
 let connection;
 
@@ -53,6 +51,13 @@ const interval = 5000; // 5 seconds
 intervalID = setInterval(checkDatabaseConnection, interval);
 
 
+//middleware for passing database connection to routes
+app.use((req, res, next) => {
+  req.dbConnection = connection;
+  next(); 
+});
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -70,19 +75,10 @@ app.get('/', (req, res) => {
 });
 
 app.use('/users', usersRouter);
+app.use('/drinks', drinksRouter);
 
-app.get('/drinks', (req,res) => {
-  const query = 'SELECT * from drinks';
 
-  connection.query(query, (err, results) => {
-    if (err) {
-      console.error("error querying from database: ", err.stack);
-      res.status(500).send("Error querying the database");
-      return;
-    }
-    res.json(results);  
-  });
-});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
