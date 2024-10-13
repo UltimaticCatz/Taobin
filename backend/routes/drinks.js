@@ -20,7 +20,7 @@ router.get('/', (req, res, next) => {
 router.post('/registerDrink', (req, res) => {
     const {drink_name, cost} = req.body;
     
-    const query = 'INSERT into drinks (drink_name, cost) values (${drink_name}, ${cost})';
+    const query = `INSERT into drinks (drink_name, cost) values (${drink_name}, ${cost})`;
 
     req.dbConnection.query(query, (err, results) => {
         if (err) {
