@@ -21,3 +21,9 @@ VALUES
     ('Hot Cocoa', 30.00, 'hot'), 
     ('Cold Cocoa', 35.00, 'cold'), 
     ('Cocoa Frappe', 40.00, 'frappe');
+
+ALTER TABLE beverage 
+ADD COLUMN image LONGBLOB;
+
+UPDATE beverage 
+SET image = NULL;
