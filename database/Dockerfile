@@ -11,4 +11,4 @@ COPY mysql_database.sql /docker-entrypoint-initdb.d/
 # These scripts will automatically be run by MySQL when the container starts.
 # Example of copying SQL files to set up tables or populate data:
 # COPY ./init.sql /docker-entrypoint-initdb.d/
-EXPOSE 3306
+EXPOSE 3307

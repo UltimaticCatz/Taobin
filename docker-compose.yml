@@ -16,11 +16,8 @@ services:
       - my-network
 
   sql:
-    image: mysql:latest
+    build: ./database
     container_name: sql
-    environment:
-      MYSQL_ROOT_PASSWORD: my-secret-pw
-      MYSQL_DATABASE: my_database
     volumes:
       - ./mysql-data:/var/lib/mysql
     ports:
