@@ -3,6 +3,7 @@ USE my_database;
 
 -- Create the table if it doesn't already exist
 CREATE TABLE IF NOT EXISTS beverage (
+    id INT AUTO_INCREMENT PRIMARY KEY,
     drink_name VARCHAR(100),
     price DECIMAL(10,2),
     type_drink VARCHAR(100)
@@ -22,8 +23,10 @@ VALUES
     ('Cold Cocoa', 35.00, 'cold'), 
     ('Cocoa Frappe', 40.00, 'frappe');
 
+-- Add column image
 ALTER TABLE beverage 
 ADD COLUMN image LONGBLOB;
 
+-- set image as null
 UPDATE beverage 
 SET image = NULL;
