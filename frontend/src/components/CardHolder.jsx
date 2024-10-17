@@ -8,7 +8,7 @@ const CardHolder = () => {
     useEffect( () => {
         const fetchDrinks = async() => {
             try {
-                const res = await fetch('/api/drinks');
+                const res = await fetch('http://localhost:3001/drinks');
                 const data = await res.json();
                 setDrinks(data);
             } catch (error) {
