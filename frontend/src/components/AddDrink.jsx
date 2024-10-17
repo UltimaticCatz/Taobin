@@ -18,7 +18,7 @@ const AddDrink = () => {
   }
 
   const addDrink = async (newDrink) => {
-    const res = await fetch('/api/registerDrink', {
+    const res = await fetch('http://localhost:3001/drinks/registerDrink', {
       method: 'POST',
       body: newDrink
     });
@@ -66,7 +66,7 @@ const AddDrink = () => {
             <div className='bg-orange-600 rounded-xl px-14 py-20 flex flex-col gap-5 times-center mx-4'>
                 <h1 className='text-3xl font-extrabold'>Add A Drink</h1>
                 <form onSubmit={submitForm} className='text-2xl'>
-                    <input type='file' onChange={(e) => setDrinkFile(e.target.value)} required/>
+                    <input type='file' onChange={(e) => setDrinkFile(e.target.files[0])} required/>
                     <p>Drink Name:</p>
                     <input type='text' className='caret-pink-500 text-black' onChange={(e) => setDrinkName(e.target.value)} required/>
                     <p>Price:</p>
