@@ -1,0 +1,74 @@
+{
+  "drinks": [
+    {
+      "image": "https://www.shutterstock.com/image-vector/herbal-tea-jasmine-glass-cup-260nw-1306079593.jpg",
+      "drink_name": "Hot Jasmine Tea",
+      "price": 25,
+      "type_drink": "Hot",
+      "id": "8915"
+    },
+    {
+      "image": "https://www.shutterstock.com/image-vector/herbal-tea-jasmine-glass-cup-260nw-1306079593.jpg",
+      "drink_name": "Cold Jasmine Tea",
+      "price": 30,
+      "type_drink": "Cold",
+      "id": "405e"
+    },
+    {
+      "image": "https://www.shutterstock.com/image-vector/herbal-tea-jasmine-glass-cup-260nw-1306079593.jpg",
+      "drink_name": "Hot Jasmine Milk Tea",
+      "price": 30,
+      "type_drink": "Hot",
+      "id": "fdb7"
+    },
+    {
+      "image": "https://www.shutterstock.com/image-vector/herbal-tea-jasmine-glass-cup-260nw-1306079593.jpg",
+      "drink_name": "Cold Jasmine Milk Tea",
+      "price": 35,
+      "type_drink": "Cold",
+      "id": "d51d"
+    },
+    {
+      "image": "https://www.shutterstock.com/image-vector/herbal-tea-jasmine-glass-cup-260nw-1306079593.jpg",
+      "drink_name": "Jasmine Milk Tea Frappe",
+      "price": 30,
+      "type_drink": "Frappe",
+      "id": "7350"
+    },
+    {
+      "image": "https://www.shutterstock.com/image-vector/herbal-tea-jasmine-glass-cup-260nw-1306079593.jpg",
+      "drink_name": "Banana Frappe",
+      "price": 30,
+      "type_drink": "Frappe",
+      "id": "411d"
+    },
+    {
+      "image": "https://www.shutterstock.com/image-vector/herbal-tea-jasmine-glass-cup-260nw-1306079593.jpg",
+      "drink_name": "Oreo Frappe",
+      "price": 40,
+      "type_drink": "Frappe",
+      "id": "6b2c"
+    },
+    {
+      "image": "https://www.shutterstock.com/image-vector/herbal-tea-jasmine-glass-cup-260nw-1306079593.jpg",
+      "drink_name": "Hot Cocoa",
+      "price": 30,
+      "type_drink": "Hot",
+      "id": "080f"
+    },
+    {
+      "image": "https://www.shutterstock.com/image-vector/herbal-tea-jasmine-glass-cup-260nw-1306079593.jpg",
+      "drink_name": "Cold Cocoa",
+      "price": 35,
+      "type_drink": "Cold",
+      "id": "d18e"
+    },
+    {
+      "image": "https://www.shutterstock.com/image-vector/herbal-tea-jasmine-glass-cup-260nw-1306079593.jpg",
+      "drink_name": "Cocoa Frappe",
+      "price": 40,
+      "type_drink": "Frappe",
+      "id": "3525"
+    }
+  ]
+}
