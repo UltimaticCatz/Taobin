@@ -18,31 +18,36 @@ const AddDrink = () => {
   }
 
   const addDrink = async (newDrink) => {
-    const res = await fetch('/api/drinks', {
+    const res = await fetch('/api/registerDrink', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(newDrink)
+      body: newDrink
     });
+
+    console.log([...newDrink]);
+
+    if (!res.ok) {
+      console.log("Error response from add Drink");
+    }
     return;
   }
 
   const submitForm = (e) => {
     e.preventDefault();
 
-    const newDrink = {
-      drink_name,
-      price,
-      type_drink,
-      image
-    }
+    const newDrink = new FormData();
+    
+    newDrink.append('drink_name', drink_name);
+    newDrink.append('price', price);
+    newDrink.append('type_drink', type_drink);
+    newDrink.append('image', image);
 
     addDrink(newDrink);
 
     toast.success("Drink Added");
 
-    window.location.reload(true);
+    setTimeout(() => {
+        window.location.reload(true);
+    }, 20000);
 
   }
 
