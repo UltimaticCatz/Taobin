@@ -2,20 +2,20 @@ version: '3.8'
 
 services:
 
-  ######## remove comment when needed (or if u want to test frontend in docker) #########
-  # react-nginx:
-  #   build: ./frontend
-  #   ports: 
-  #     - "80:80"
-  #   volumes:
-  #     - ./frontend/build:/usr/share/nginx/html
-  #   networks:
-  #     - my-network
+  ####### remove comment when needed (or if u want to test frontend in docker) #########
+  react-nginx:
+    build: ./frontend
+    ports: 
+      - "80:80"
+    volumes:
+      - ./frontend/dist:/usr/share/nginx/html
+    networks:
+      - my-network
 
   taobin-express:
     build: ./backend
     ports:
-      - "3000:3000"
+      - "3001:3001"
     depends_on:
       - sql
     environment:
