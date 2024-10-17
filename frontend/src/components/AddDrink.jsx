@@ -47,7 +47,7 @@ const AddDrink = () => {
 
     setTimeout(() => {
         window.location.reload(true);
-    }, 20000);
+    }, 2000);
 
   }
 
